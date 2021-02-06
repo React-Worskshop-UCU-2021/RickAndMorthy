@@ -1,0 +1,19 @@
+.DetailedUserHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+
+  &__logo {
+    width: 190px;
+    height: 56px;
+    margin: 15px 48px;
+  }
+
+  &__searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+}

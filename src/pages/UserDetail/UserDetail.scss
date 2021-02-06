@@ -1,0 +1,24 @@
+.DetailedUser {
+  background: var(--text-dark);
+  padding: 70px 120px;
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 40px;
+    background: var(--text-dark-overlayed);
+    border-radius: 12px;
+  }
+
+  &__description {
+    margin-left: 48px;
+
+    &_tags {
+      display: flex;
+    }
+
+    &_title {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.Hero {
+  &__heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 65px;
+    font-size: 4em;
+  }
+
+  &__filters {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  &__logo {
+    width: 438px;
+    height: 129px;
+    margin: 0 48px;
+  }
+
+  &__search {
+    font-size: 24px;
+  }
+}

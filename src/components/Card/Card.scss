@@ -1,0 +1,43 @@
+.Card {
+  width: 282px;
+  border-radius: 12px;
+  background-color: #2a2a42;
+  margin: 12px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 24px 16px;
+  }
+
+  &__name {
+    color: white;
+    font-size: 24px;
+    margin: 0 0 8px 0;
+    text-align: left;
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: left;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    width: 100%;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+  }
+
+  &__mainInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,40 @@
+.Pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+
+  &__page {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--text-dark-overlayed);
+    color: var(--text-white);
+    margin-right: 8px;
+
+    &:last-of-type {
+      margin-left: 0;
+    }
+
+    &_active {
+      background: var(--text-white);
+      color: var(--text-dark);
+    }
+  }
+
+  &__arrow {
+    opacity: 0.3;
+    height: 12px;
+    width: 12px;
+    content: url('../../assets/icons/arrow.svg');
+    &_next {
+      transform: rotateY(180deg);
+    }
+    &_active {
+      opacity: 1;
+    }
+  }
+}
