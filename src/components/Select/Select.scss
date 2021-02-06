@@ -4,9 +4,11 @@
   background: var(--background-light);
   border-radius: 8px;
   position: relative;
+
   &:first-child {
     margin-right: 40px;
   }
+
   &:hover {
     cursor: pointer;
   }
@@ -58,6 +60,7 @@
     font-size: 18px;
     font-weight: bold;
     border-radius: 8px;
+
     &:hover {
       background: var(--cta);
     }

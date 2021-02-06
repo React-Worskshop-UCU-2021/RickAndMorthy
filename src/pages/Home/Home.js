@@ -2,8 +2,7 @@ import "./Home.scss";
 import _ from "lodash";
 import UserList from "../../components/UserList";
 import Hero from "../../components/Hero";
-import { getCharacters } from "../../api";
-import { useEffect, useState, useCallback } from "react";
+import { useCallback, useState } from "react";
 
 function Home() {
   const [queryName, setQueryName] = useState("");
@@ -23,7 +22,7 @@ function Home() {
   return <div className="Home">
     <Hero
       characterName={name}
-      setcharacterName={onNameChange}
+      setCharacterName={onNameChange}
       gender={gender}
       setGender={setGender}
       status={status}

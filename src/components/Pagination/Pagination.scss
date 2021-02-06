@@ -30,9 +30,11 @@
     height: 12px;
     width: 12px;
     content: url('../../assets/icons/arrow.svg');
+
     &_next {
       transform: rotateY(180deg);
     }
+
     &_active {
       opacity: 1;
     }

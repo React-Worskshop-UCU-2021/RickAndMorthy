@@ -1,13 +1,8 @@
 import "./Pagination.scss";
-import { useState } from "react";
-import _ from 'lodash';
-const Pagination = ({ pages, currentPage, setCurrentPage }) => {
+import _ from "lodash";
+import PropTypes from "prop-types";
 
-  // eslint-disable-next-line no-undef
-  const pagesArray = _(Array(pages))
-    .fill(null)
-    .map((el, ind) => ind)
-    .value();
+const Pagination = ({ pages, currentPage, setCurrentPage }) => {
 
   const getDisplayedPages = () => {
     if (currentPage - 2 <= 0) return _.range(0, Math.min(5, pages));
@@ -16,7 +11,7 @@ const Pagination = ({ pages, currentPage, setCurrentPage }) => {
     const minPage = Math.max(currentPage - 2, 0);
     const maxPage = Math.min(minPage + 4, pages);
     // eslint-disable-next-line no-undef
-    return _.range(minPage, maxPage + 1)
+    return _.range(minPage, maxPage + 1);
   };
 
   const handleClick = (page, isArrowClickable = true) => () => {
@@ -26,6 +21,7 @@ const Pagination = ({ pages, currentPage, setCurrentPage }) => {
     }
     setCurrentPage(page);
   };
+
   const renderPage = (page) => {
     const isActive = page === currentPage;
     return (
@@ -54,5 +50,11 @@ const Pagination = ({ pages, currentPage, setCurrentPage }) => {
     {renderArrowButton(true)}
   </div>;
 };
+
+Pagination.propTypes = {
+  pages: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  setCurrentPage: PropTypes.func.isRequired
+}
 
 export default Pagination;

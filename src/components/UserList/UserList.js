@@ -2,7 +2,8 @@ import "./UserList.scss";
 import Card from "../Card";
 import Pagination from "../Pagination";
 import { getCharacters } from "../../api";
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 
 const UserList = ({ status, gender, name }) => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -19,11 +20,12 @@ const UserList = ({ status, gender, name }) => {
 
   useEffect(() => {
     setCurrentPage(0);
-  }, [name, status, gender])
+  }, [name, status, gender]);
 
   const loadData = async (page = 0, params) => {
     console.log("->", params);
     const items = await getCharacters(page + 1, params);
+    console.log("--->", items);
     setCharacters(items?.results);
     setPages(items?.info.pages || 0);
   };
@@ -35,5 +37,11 @@ const UserList = ({ status, gender, name }) => {
     <Pagination pages={pages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
   </div>;
 };
+
+UserList.propTypes = {
+  status: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
+}
 
 export default UserList;
