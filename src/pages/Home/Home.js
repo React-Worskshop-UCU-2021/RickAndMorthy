@@ -12,6 +12,7 @@ function Home() {
 
   const delayedQuery = useCallback(_.debounce(setQueryName, 500), [setQueryName]);
 
+  // TODO: remove
   console.log("-->", queryName);
 
   const onNameChange = (value) => {

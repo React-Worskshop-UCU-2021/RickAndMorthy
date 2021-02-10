@@ -4,6 +4,8 @@ import Search from "../Search/Search";
 import Select from "../Select";
 import PropTypes from 'prop-types';
 
+// TODO: reorder imports
+
 const statusOptions = [
   { value: "", label: "all" },
   { value: "alive", label: "alive" },

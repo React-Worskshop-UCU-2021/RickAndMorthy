@@ -23,6 +23,7 @@ const UserList = ({ status, gender, name }) => {
   }, [name, status, gender]);
 
   const loadData = async (page = 0, params) => {
+    // TODO: console logs
     console.log("->", params);
     const items = await getCharacters(page + 1, params);
     console.log("--->", items);

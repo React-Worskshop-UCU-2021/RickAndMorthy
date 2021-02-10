@@ -7,6 +7,7 @@ import { getCharacter, getEpisodes } from "../../api";
 import InfoValue from "../../components/InfoValue/InfoValue";
 import InfoLabel from "../../components/InfoLabel";
 
+// TODO: unused prop selectCharacter
 function UserDetail({ selectCharacter }) {
   const { id } = useParams();
   const [character, setCharacter] = useState("");
@@ -47,6 +48,7 @@ function UserDetail({ selectCharacter }) {
     location
   } = character || {};
 
+  // TODO: prettify the code
   return character ? (<div className="DetailedUser">
     <p className="DetailedUser__navText">
       <NavLink className="DetailedUser__link" activeClassName="DetailedUser__activeLink" exact to="/">

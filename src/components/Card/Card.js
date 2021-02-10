@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import InfoView from "../InfoView/InfoView";
 import PropTypes from "prop-types";
 
+// TODO: reorder imports (eslint rule)
+
 const Card = ({ id, name, image, status, gender, location, origin }) => {
   return (
     <div className="Card">

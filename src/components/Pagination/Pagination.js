@@ -10,11 +10,13 @@ const Pagination = ({ pages, currentPage, setCurrentPage }) => {
       return _.range(Math.max(pages - 5, 0), pages);
     const minPage = Math.max(currentPage - 2, 0);
     const maxPage = Math.min(minPage + 4, pages);
+    // TODO: why you disable next line?
     // eslint-disable-next-line no-undef
     return _.range(minPage, maxPage + 1);
   };
 
   const handleClick = (page, isArrowClickable = true) => () => {
+    // TODO: no console logs (eslint rule)
     console.log("-->", isArrowClickable);
     if (!isArrowClickable) {
       return;
@@ -43,6 +45,7 @@ const Pagination = ({ pages, currentPage, setCurrentPage }) => {
     );
   };
 
+  // TODO: same about disabling - why? Better to fix then disable
   return <div className="Pagination">
     {renderArrowButton()}
     {/* eslint-disable-next-line no-undef */}
